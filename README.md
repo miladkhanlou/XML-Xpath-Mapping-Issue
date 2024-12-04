@@ -1,6 +1,6 @@
 # Report on XML XPath Mapping Issue
 
-During the migration and mapping process of LSU content, I noticed something interesting about how the `title` element is mapped from MODS XML files. Initially, I thought the issue was about the **namespace version** causing inconsistencies, but after further analysis, I found that it’s not about the **namespace version** itself—it’s about the **structure** and **attributes** included in the `mods` element.
+During the migration and mapping process of LSU content, we noticed something interesting about how the `title` element is mapped from MODS XML files. Initially, I thought the issue was about the **namespace version** causing inconsistencies, but after further analysis, I found that it’s not about the **namespace version** itself—it’s about the **structure** and **attributes** included in the `mods` element.
 
 ## Etymologies Used in This Report
 To ensure clarity, the following terms are used consistently throughout this report:
@@ -52,7 +52,7 @@ To ensure clarity, the following terms are used consistently throughout this rep
 # What’s Causing This
 The difference comes from the `xsi:schemaLocation` attribute in the second XML file. It’s providing schema validation hints, which makes the parser:
 - Follow the schema-defined layout instead of a looser interpretation.
-- Skip intermediate elements like `info` and directly map `mods:title`.
+- Skip intermediate elements like `titleInfo` to get text from this element and directly maps the text to `mods` instead of `mods/titleInfo/title`.
 
 Even though both files share the same namespace (`http://www.loc.gov/mods/v3`), the schema hints make a big difference in how the structure is processed. The version (`version="3.7"`) and schema rigidity also seem to influence this behavior.
 
