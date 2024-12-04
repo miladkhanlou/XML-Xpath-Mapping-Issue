@@ -14,7 +14,7 @@ To ensure clarity, the following terms are used consistently throughout this rep
 
 # What I Found
 
-### 1. lasc-earlylaw Content (Incorrected mapping from xml namespace):
+### 1. `lasc-earlylaw` Content (Incorrected mapping from xml namespace):
 
 - The XPath `title/info/title` **doesn’t work** for the `title` element here.
 
@@ -30,7 +30,7 @@ To ensure clarity, the following terms are used consistently throughout this rep
   - `<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.7" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-7.xsd">`
 
 
-### 2. LSU Content (Corrected mapping from xml namespace):
+### 2. `LSU` Content (Corrected mapping from xml namespace):
 
 - The XPath `title/info/title` works **perfectly** for mapping the `title` element.
 
