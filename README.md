@@ -82,5 +82,5 @@ title = tree.find('.//mods:title', namespaces=namespace) #Example for `.find` in
 ---
 
 # Summery of issue Conclusion
-This issue isn’t about namespace differences like I initially thought. It’s more about the extra attributes and schema-driven structure in the XML. Let’s standardize how we handle these attributes to avoid any further mapping inconsistencies.
+This issue isn’t about namespace differences like I initially thought. It’s more about the extra attributes and schema-driven structure in the XML.
 
